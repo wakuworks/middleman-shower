@@ -204,6 +204,7 @@
 			// NOTE: we should update hash to get things work properly
 			url.hash = '#' + e.target.parentNode.parentNode.id;
 			history.replaceState(null, null, url.pathname + '?full#' + e.target.parentNode.parentNode.id);
+			document.body.scrollTop = 0;
 			enterSingleSlideMode();
 
 			updateProgress(getCurrentSlideNumber());
